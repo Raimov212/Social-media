@@ -1,7 +1,9 @@
 import "./rightbar.css";
 import gift from "../../assets/gift.png";
 import smooth from "../../assets/smooth.jpg";
-import girlfriend from '../../assets/girlFriend.jpg'
+import girlfriend from "../../assets/girlFriend.jpg";
+import { Users } from "../../data/data";
+import Online from "../online/Online.jsx";
 
 export default function Rightbar() {
   return (
@@ -16,134 +18,9 @@ export default function Rightbar() {
         <img src={smooth} alt="" className="rightbarGift" />
         <h4 className="rightbarTitle">Online friends</h4>
         <ul className="rightbarFriendsList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li><li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src={girlfriend} alt="" className="rightbarProfileImg" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">Luise Jane</span>
-          </li>
+          {Users.map((u) => (
+            <Online user={u} />
+          ))}
         </ul>
       </div>
     </div>
